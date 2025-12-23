@@ -250,7 +250,7 @@ int main()
         int* mas = new int[SIZE];
         init(mas);
         auto start = std::chrono::steady_clock::now();
-        mergeSort(mas, 0, SIZE - 1); // Исправлено: SIZE-1 вместо SIZE
+        mergeSort(mas, 0, SIZE - 1);
         auto finish = std::chrono::steady_clock::now();
         std::cout << "Time of merge sort (single thread) = "
             << std::chrono::duration_cast<std::chrono::microseconds>(finish - start).count()
@@ -271,7 +271,7 @@ int main()
         int* mas = new int[SIZE];
         init(mas);
         auto start = std::chrono::steady_clock::now();
-        mergeSortParallel(mas, 0, SIZE - 1); // Исправлено: SIZE-1 вместо SIZE
+        mergeSortParallel(mas, 0, SIZE - 1);
         auto finish = std::chrono::steady_clock::now();
         std::cout << "Time of parallel merge sort = "
             << std::chrono::duration_cast<std::chrono::microseconds>(finish - start).count()
